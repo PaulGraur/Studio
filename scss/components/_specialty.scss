@@ -13,14 +13,18 @@
 }
 
 .specialty {
-  padding-bottom: 60px;
+  padding-top: 60px;
 
   @media screen and (min-width: $tablet) {
-    padding: 94px 0;
+    padding: 60px 0;
   }
   @media screen and (min-width: $desctop) {
+    padding: 94px 0;
     padding-bottom: 0;
     display: flex;
+    &:not(first-child) {
+      padding-bottom: 0;
+    }
   }
 
   &__hidden {
@@ -41,11 +45,11 @@
     @media screen and (min-width: $desctop) {
       flex-wrap: nowrap;
       width: auto;
+      gap: 30px;
     }
   }
 
   &__item {
-    margin-bottom: 30px;
 
     @media screen and (min-width: $tablet) and (max-width: $desctop) {
       max-width: 354px;
@@ -54,7 +58,6 @@
 
     @media screen and (min-width: $desctop) {
       width: 100%;
-      gap: 30px;
     }
   }
 
@@ -75,7 +78,8 @@
     }
 
     @media screen and (min-width: $desctop) {
-      max-width: 270px;
+      // max-width: 270px;
+      gap: 30px;
     }
   }
 
@@ -97,6 +101,18 @@
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    &:not(last-child) {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: $desctop) {
+      margin-bottom: 0px;
+    }
   }
   &__paragraph::after {
     background-color: black;

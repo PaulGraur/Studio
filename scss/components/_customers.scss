@@ -1,6 +1,4 @@
 .customers {
-  padding: 94px 0 94px 0;
-
   .container--customers {
     text-align: center;
   }
@@ -19,10 +17,10 @@
 
   &__list {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    align-items: center;
     justify-content: center;
+    gap: 30px;
   }
 
   &__item {
@@ -36,11 +34,12 @@
     @media screen and (max-width: 479.98px) {
       margin-right: auto;
       margin-left: auto;
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
+      flex: none;
     }
 
-    @media screen and (max-width: 479.98px) {
-      flex: none;
+    @media screen and (max-width: $mobile) {
+      width: calc((100% - 30px) / 2);
     }
 
     @media screen and (min-width: $tablet) {
