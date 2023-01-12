@@ -1,0 +1,104 @@
+.container__specialty {
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desctop) {
+    max-width: $desctop;
+  }
+}
+
+.specialty {
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 94px 0;
+  }
+  @media screen and (min-width: $desctop) {
+    padding-bottom: 0;
+    display: flex;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) and (max-width: $desctop) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    @media screen and (min-width: $desctop) {
+      flex-wrap: nowrap;
+      width: auto;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) and (max-width: $desctop) {
+      max-width: 354px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desctop) {
+      width: 100%;
+      gap: 30px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    height: 120px;
+    max-width: 450px;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) and (max-width: $desctop) {
+      max-width: 354px;
+    }
+
+    @media screen and (min-width: $desctop) {
+      max-width: 270px;
+    }
+  }
+
+  &__meaning {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin: 0 0 10px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
+  }
+
+  &__paragraph {
+    color: $text-color;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+  &__paragraph::after {
+    background-color: black;
+  }
+}
